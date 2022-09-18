@@ -1,0 +1,6 @@
+﻿  heap.c
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(84,63): warning C4047: 'function': 'PVOID *' differs in levels of indirection from 'void *(*)[10]'
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(84,44): warning C4022: 'RtlCaptureStackBackTrace': pointer mismatch for actual parameter 3
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(91,55): warning C4047: 'function': 'DWORD64' differs in levels of indirection from 'void *'
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(91,52): warning C4024: 'SymGetSymFromAddr64': different types for formal and actual parameter 2
+  ga2022.vcxproj -> C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
