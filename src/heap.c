@@ -1,5 +1,6 @@
 #include "heap.h"
 #include "debug.h"
+#include "mutex.h"
 
 #include "tlsf.h"
 
@@ -26,6 +27,7 @@ typedef struct heap_t
 	tlsf_t tlsf;							// void* that needs memory for its control instructions
 	size_t grow_increment;
 	arena_t* arena;							// head of linked list
+	mutex_t* mutex;
 } heap_t;
 
 heap_t* heap_create(size_t grow_increment)
@@ -40,6 +42,7 @@ heap_t* heap_create(size_t grow_increment)
 		return NULL;
 	}
 	
+	heap->mutex = mutex_create();
 	heap->grow_increment = grow_increment;	
 	heap->tlsf = tlsf_create(heap + 1);	// jump one past heap and then we can find the tlsf_size()
 	heap->arena = NULL;
@@ -50,6 +53,8 @@ heap_t* heap_create(size_t grow_increment)
 // allocated memory and also sets up the arena to store the callstack in the event of a leak
 void* heap_alloc(heap_t* heap, size_t size, size_t alignment)
 {
+	mutex_lock(heap->mutex);
+
 	void* address = tlsf_memalign(heap->tlsf, alignment, size);		// << this could fail if tlsf doesn't have enough memory
 	if (!address) {
 		size_t arena_size = __max(heap->grow_increment, size * 2) + sizeof(arena_t);	// << allocate a little more, since there could be other large requests
@@ -99,12 +104,16 @@ void* heap_alloc(heap_t* heap, size_t size, size_t alignment)
 		SymCleanup(process);
 	}
 
+	mutex_unlock(heap->mutex);
+
 	return address;
 }
 
 void heap_free(heap_t* heap, void* address)
 {
+	mutex_lock(heap->mutex);
 	tlsf_free(heap->tlsf, address);
+	mutex_unlock(heap->mutex);
 }
 
 static void my_walker(void* ptr, size_t size, int used, void* user)
@@ -140,6 +149,8 @@ void heap_destroy(heap_t* heap) {
 		VirtualFree(arena, 0, MEM_RELEASE);
 		arena = next;
 	}
+
+	mutex_destroy(heap->mutex);
 
 	VirtualFree(heap, 0, MEM_RELEASE);
 }

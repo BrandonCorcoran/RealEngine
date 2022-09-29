@@ -1,6 +1,7 @@
-﻿  heap.c
-C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(84,63): warning C4047: 'function': 'PVOID *' differs in levels of indirection from 'void *(*)[10]'
-C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(84,44): warning C4022: 'RtlCaptureStackBackTrace': pointer mismatch for actual parameter 3
-C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(91,55): warning C4047: 'function': 'DWORD64' differs in levels of indirection from 'void *'
-C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\heap.c(91,52): warning C4024: 'SymGetSymFromAddr64': different types for formal and actual parameter 2
-  ga2022.vcxproj -> C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
+﻿  fs.c
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(132,26): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(136,45): warning C4013: 'LZ4_compress_default' undefined; assuming extern returning int
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(257,44): warning C4013: 'LZ4_decompress_safe' undefined; assuming extern returning int
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(266,33): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(294,9): warning C4013: 'printf' undefined; assuming extern returning int
+  ga2022.vcxproj -> C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe

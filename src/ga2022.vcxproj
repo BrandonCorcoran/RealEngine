@@ -123,7 +123,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>SDK Path\Lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dbghelp.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,9 +145,15 @@
   <ItemGroup>
     <ClCompile Include="atomic.c" />
     <ClCompile Include="debug.c" />
+    <ClCompile Include="event.c" />
+    <ClCompile Include="fs.c" />
     <ClCompile Include="heap.c" />
+    <ClCompile Include="lecture7.c" />
+    <ClCompile Include="lz4.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="mutex.c" />
+    <ClCompile Include="queue.c" />
+    <ClCompile Include="semaphore.c" />
     <ClCompile Include="thread.c" />
     <ClCompile Include="tlsf.c" />
     <ClCompile Include="wm.c" />
@@ -155,10 +161,17 @@
   <ItemGroup>
     <ClInclude Include="atomic.h" />
     <ClInclude Include="debug.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="fs.h" />
     <ClInclude Include="heap.h" />
+    <ClInclude Include="lz4.h" />
+    <ClInclude Include="math.h" />
     <ClInclude Include="mutex.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="semaphore.h" />
     <ClInclude Include="thread.h" />
     <ClInclude Include="tlsf.h" />
+    <ClInclude Include="vec3f.h" />
     <ClInclude Include="wm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
