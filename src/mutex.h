@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 // Recursive mutex thread synchronization
 
 // Handle to a mutex.

@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 // Thread-safe Queue container
 
 // Handle to a thread-safe queue.

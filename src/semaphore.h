@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 // Counting semaphore thread synchronization
 
 // Handle to a semaphore

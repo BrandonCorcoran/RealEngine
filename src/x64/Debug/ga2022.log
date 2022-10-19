@@ -1,7 +1,18 @@
-﻿  fs.c
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(132,26): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(136,45): warning C4013: 'LZ4_compress_default' undefined; assuming extern returning int
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(257,44): warning C4013: 'LZ4_decompress_safe' undefined; assuming extern returning int
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(266,33): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\fs.c(294,9): warning C4013: 'printf' undefined; assuming extern returning int
+﻿  trace.c
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(58,10): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(58,10): message : consider using '%zd' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(73,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(97,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(124,33): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'UINT64'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(124,33): message : consider using '%lld' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(124,33): message : consider using '%Id' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(124,33): message : consider using '%I64d' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(133,34): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'UINT64'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(133,34): message : consider using '%lld' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(133,34): message : consider using '%Id' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(133,34): message : consider using '%I64d' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(138,34): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'UINT64'
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(138,34): message : consider using '%lld' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(138,34): message : consider using '%Id' in the format string
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(138,34): message : consider using '%I64d' in the format string
   ga2022.vcxproj -> C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
