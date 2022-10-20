@@ -34,8 +34,6 @@ int main(int argc, const char* argv[])
 	homework3_test();
 	debug_print(k_print_warning, "HW3 PASSED\n");
 
-	return 0;
-
 	// NOTES ON DEREFERENCING NULL, TRY / EXCEPT, HEAP - 2
 
 	//extern void lecture7_thread_test();
@@ -203,6 +201,7 @@ static void homework3_test()
 
 	// Call a function that will push/pop duration events.
 	homework3_slow_function(trace);
+
 
 	// Wait for thread to finish.
 	thread_destroy(thread);
