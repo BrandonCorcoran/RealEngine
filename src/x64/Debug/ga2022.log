@@ -1,4 +1,4 @@
-﻿  trace.c
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(84,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\trace.c(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  frogger_game.c
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\vec3f.h(130,13): warning C4013: 'lerpf' undefined; assuming extern returning int
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\vec3f.h(133,2): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   ga2022.vcxproj -> C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
