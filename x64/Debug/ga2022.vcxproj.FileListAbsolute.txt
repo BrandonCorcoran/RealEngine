@@ -1,0 +1,5 @@
+C:\projects\gamearch-2022\ga2022\src\x64\Debug\ga2022.exe
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
+C:\Users\Brandon\Dropbox\New_Copy\2022_Fall\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.pdb
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.exe
+C:\Users\Brandon\Desktop\GameArchitecture\ClassCopy\src\x64\Debug\ga2022.pdb
