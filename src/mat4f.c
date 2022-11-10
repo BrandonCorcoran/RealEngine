@@ -239,3 +239,29 @@ void mat4f_make_lookat(mat4f_t* m, const vec3f_t* eye, const vec3f_t* dir, const
 	m->data[3][2] = -vec3f_dot(z_vec, *eye);
 	m->data[3][3] = 1.0f;
 }
+
+
+
+void mat4f_make_orthographic(mat4f_t* m, float left, float right, float top, float bottom, float f, float n)
+{
+
+	m->data[0][0] = 2.0f / (right - left);
+	m->data[0][1] = 0.0f;
+	m->data[0][2] = 0.0f;
+	m->data[0][3] = 0.0f;
+
+	m->data[1][0] = 0.0f;
+	m->data[1][1] = 2.0f / (top - bottom);
+	m->data[1][2] = 0.0f;
+	m->data[1][3] = 0.0f;
+
+	m->data[2][0] = 0.0f;
+	m->data[2][1] = 0.0f;
+	m->data[2][2] = -2.0f / (f - n);
+	m->data[2][3] = 0.0f;
+
+	m->data[3][0] = -(right + left) / (right - left);
+	m->data[3][1] = -(top + bottom) / (top - bottom);
+	m->data[3][2] = -(f + n) / (f - n);
+	m->data[3][3] = 1.0f;
+}

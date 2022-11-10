@@ -82,7 +82,12 @@ void* heap_alloc(heap_t* heap, size_t size, size_t alignment)
 		address = tlsf_memalign(heap->tlsf, alignment, size);		// possible it could still fail
 	}
 
+	// **********************************************
+	// * COMMENTED OUT FOR HW4 IMPROVED PERFORMANCE *
+	// **********************************************
+
 	// Create Stack
+#if 0
 	if (address) {
 		HANDLE process = GetCurrentProcess();
 
@@ -103,6 +108,7 @@ void* heap_alloc(heap_t* heap, size_t size, size_t alignment)
 		
 		SymCleanup(process);
 	}
+#endif
 
 	mutex_unlock(heap->mutex);
 

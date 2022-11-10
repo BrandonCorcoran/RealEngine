@@ -40,6 +40,11 @@ typedef struct wm_window_t {
 	uint32_t key_mask;
 	int mouse_x;
 	int mouse_y;
+
+	float bottom;
+	float top;
+	float left;
+	float right;
 } wm_window_t;
 
 
@@ -197,6 +202,13 @@ wm_window_t* wm_create(heap_t* heap)
 	// Windows are created hidden by default, so we need to show it here
 	ShowWindow(hwnd, TRUE);
 
+	RECT rect = { NULL };
+	int a = GetWindowRect(hwnd, &rect);
+	win->top = rect.top;
+	win->bottom = rect.bottom;
+	win->left = rect.left;
+	win->right = rect.right;
+
 	return win;
 }
 
@@ -228,4 +240,9 @@ void wm_destroy(wm_window_t* window)
 {
 	DestroyWindow(window->hwnd);
 	heap_free(window->heap, window);
+}
+
+void* wm_get_raw_window(wm_window_t* window)
+{
+	return window->hwnd;
 }
