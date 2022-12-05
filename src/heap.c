@@ -1,3 +1,4 @@
+/** \file */
 #include "heap.h"
 #include "debug.h"
 #include "mutex.h"

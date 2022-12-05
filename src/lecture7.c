@@ -1,3 +1,4 @@
+/** \file */
 #include "atomic.h"
 #include "debug.h"
 #include "event.h"

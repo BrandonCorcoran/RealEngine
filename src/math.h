@@ -1,16 +1,26 @@
+/** @file math.h
+*	@brief A header file for math support
+* 
+*	Writing these in .h file, so compiler has to inline these functions\n
+*	Inline does not make the actual function call, so the compiler puts the body of the function where it was requested\n
+*	This is encouraged because otherwise it might take more time to load function than to actually execute\n
+*	This is used in conjunction with vec3f.h to allow for comparisons of if floats are almost equal and to lerp
+*	between values
+*/
 #pragma once
 
 #include <float.h>
 #include <math.h>
 #include <stdbool.h>
 
-// writing these in .h file, so compiler has to inline these functions
-// inline does not make the actual function call, so the compiler puts the body of the function where it was requested
-//	This is encouraged because otherwise it might take more time to load function than to actually execute
-
-
-// Determines if two scalar values are nearly equal
-// given the limitations of floating point accuracy.
+/**	@brief A function to determine if two floats are almost equal
+*	@param a a float
+*	@param b a float
+*	@returns a bool, which will return true if the values are almost equal; false otherwise
+* 
+*	Determines if two scalar values are nearly equal
+*	given the limitations of floating point accuracy.
+*/
 __forceinline bool almost_equalf(float a, float b)
 {
 	float diff = fabsf(a - b);			// fabsf gives us 32-bit floating point values; otherwise we would get 64-bit ones
@@ -25,8 +35,14 @@ __forceinline bool almost_equalf(float a, float b)
 	return false;
 }
 
-// Linearly interpolate between two floating point values.
-// Return the resulting value.
+/** @brief A function to lerp between two floats
+*	@param begin a float, which is where the lerp begins from
+*	@param end a float, which is where the lerp ends
+*	@param distance a float, which is over how far the values are lerped
+*	@returns a float which is the lerped value
+*	
+*	Linearly interpolate between two floating point values and return the resulting value
+*/
 __forceinline float lerp(float begin, float end, float distance)
 {
 	return (begin * (1.0f - distance)) + (end * distance);

@@ -1,3 +1,4 @@
+/** \file */
 #include "ecs.h"
 #include "fs.h"
 #include "gpu.h"

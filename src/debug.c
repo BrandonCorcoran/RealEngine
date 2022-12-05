@@ -1,3 +1,4 @@
+/** \file */
 #include "debug.h"
 
 #include <stdarg.h>

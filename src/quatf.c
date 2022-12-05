@@ -1,3 +1,4 @@
+/** \file */
 #include "quatf.h"
 
 #define _USE_MATH_DEFINES

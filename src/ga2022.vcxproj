@@ -125,6 +125,13 @@
       <AdditionalLibraryDirectories>SDK Path\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>dbghelp.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>echo $(ProjectDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -156,6 +163,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="mat4f.c" />
     <ClCompile Include="mutex.c" />
+    <ClCompile Include="net.c" />
     <ClCompile Include="quatf.c" />
     <ClCompile Include="queue.c" />
     <ClCompile Include="render.c" />
@@ -183,6 +191,7 @@
     <ClInclude Include="mat4f.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="mutex.h" />
+    <ClInclude Include="net.h" />
     <ClInclude Include="quatf.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="render.h" />
@@ -217,6 +226,7 @@
     <ClInclude Include="wm.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Doxyfile" />
     <None Include="shaders\triangle.frag" />
     <None Include="shaders\triangle.frag.spv" />
     <None Include="shaders\triangle.vert" />

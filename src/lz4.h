@@ -1,4 +1,6 @@
-/*
+/**  @file lz4.h
+*   @brief A header file for a compression algorithm (provided by Yann Collet)
+ *
  *  LZ4 - Fast LZ compression algorithm
  *  Header File
  *  Copyright (C) 2011-2020, Yann Collet.

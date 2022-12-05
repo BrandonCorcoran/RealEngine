@@ -1,3 +1,4 @@
+/** \file */
 /*
    LZ4 - Fast LZ compression algorithm
    Copyright (C) 2011-2020, Yann Collet.

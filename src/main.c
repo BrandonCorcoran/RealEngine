@@ -1,5 +1,4 @@
-// c:> RealEngine.exe foo bar
-
+/** @file main.c */
 #include "atomic.h"
 #include "debug.h"
 #include "fs.h"
@@ -18,6 +17,7 @@
 #include "simple_game.h"
 #include "frogger_game.h"
 
+
 #include <assert.h>
 #include <stdio.h>
 
@@ -26,9 +26,14 @@
 
 #include <windows.h>
 
+
 static void homework1_test();
 static void homework2_test();
 static void homework3_test();
+
+/// This is a test string
+char* hello = "test string";
+
 
 // NOTES ON MUTEX / THREADS / ATOMIC - 1
 
@@ -39,6 +44,10 @@ int main(int argc, const char* argv[])
 	
 	timer_startup();
 	
+
+	
+	
+
 	/*homework1_test();
 	debug_print(k_print_warning, "HW1 PASSED\n");
 	homework2_test();
@@ -62,7 +71,7 @@ int main(int argc, const char* argv[])
 
 	//timer_object_t* root_time = timer_object_create(heap, NULL);
 
-	//simple_game_t* game = simple_game_create(heap, fs, window, render);
+	//simple_game_t* game = simple_game_create(heap, fs, window, render, argc, argv);
 	frogger_game_t* game = frogger_game_create(heap, fs, window, render);
 
 	while (!wm_pump(window))

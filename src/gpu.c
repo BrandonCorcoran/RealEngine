@@ -1,3 +1,4 @@
+/** \file */
 #include "gpu.h"
 
 #include "debug.h"

@@ -1,3 +1,4 @@
+/** \file */
 #include "mat4f.h"
 
 #include "quatf.h"

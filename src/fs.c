@@ -1,3 +1,4 @@
+/** \file */
 #include "fs.h"
 
 #include "event.h"
